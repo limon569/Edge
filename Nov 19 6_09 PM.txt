@@ -1,0 +1,68 @@
+import calculation.Sum;
+import calculation.Substract;
+
+public class Main {
+    public static void main(String[] args) {
+        // Create instances of Sum and Substract
+        Sum sumObj = new Sum();
+        Substract subObj = new Substract();
+
+        // Perform calculations
+        int sumResult = sumObj.add(15, 5);
+        int subResult = subObj.subtract(15, 5);
+
+        // Output results
+        System.out.println("Sum: " + sumResult);
+        System.out.println("Subtraction: " + subResult);
+    }
+}
+
+
+
+
+
+
+
+package calculation;
+
+public class Sum {
+    // Method to perform addition
+    public int add(int a, int b) {
+        return a + b;
+    }
+}
+
+
+
+
+
+package calculation;
+
+public class Substract {
+    // Method to perform subtraction
+    public int subtract(int a, int b) {
+        return a - b;
+    }
+}
+
+
+
+
+package calculation;
+
+public class Sum {
+    public Sum(int a, int b) {
+        System.out.println(a + b);
+    }
+
+    // Method to perform addition with a variable number of arguments (varargs)
+    public int add(int... numbers) {
+        int sum = 0;
+        for (int number : numbers) {
+            sum += number;
+        }
+        return sum;
+    }
+}
+
+
